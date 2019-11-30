@@ -1,0 +1,26 @@
+.header{
+	background-color: #FFFFFF;
+	height: 160px;
+	/*border:solid 1px black;*/
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px;
+}
+.name{
+	font-size:50px;	
+	font-family: 'Arvo', serif;
+}
+.options{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	/*border:solid 1px black;*/
+}
+.icon{
+	padding: 15px;
+	font-size: 30px;
+	font-family: 'Arvo', serif;
+}

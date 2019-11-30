@@ -1,0 +1,15 @@
+body{
+	margin:0px;
+}
+.container{
+	height: 600px;
+}
+.lightblue{
+	background-color: #8CCFFF;
+}
+.blue{
+	background-color: #2B8FED;
+}
+.darkblue{
+	background-color: #002D57; 
+}
