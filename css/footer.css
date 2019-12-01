@@ -57,6 +57,7 @@
 	font-family: 'Arvo', serif;
 	font-size: 20px;
 	color: white;
+	border-radius: 5px;
 	transition: 0.3s;
 }
 #submit:hover{
