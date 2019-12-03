@@ -23,4 +23,13 @@
 	padding: 15px;
 	font-size: 30px;
 	font-family: 'Arvo', serif;
+	color: black;
+}
+.icon a, #name a{
+	transition: 0.2s;
+	color: black;
+}
+.icon a:hover{
+	color: #8CCFFF;
+	transition: 0.2s;
 }

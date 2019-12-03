@@ -3,33 +3,56 @@
 <head>
 	<title>Daksh Rawat</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" type="text/css" href="css/header.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
-	<link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">     
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript">
+		function hover(x){
+			y=document.getElementById(x)
+			y.style.transition = "0.4s"
+			y.style.backgroundColor = "gold"
+		}
+		function unhover(){
+			document.getElementById('pro').style.backgroundColor = "#D6D6D6"
+			document.getElementById('semipro').style.backgroundColor = "#8C918D"
+			document.getElementById('intermediate').style.backgroundColor = "#524C4B"
+			document.getElementById('beginner').style.backgroundColor = "#000000"
+		}
+		function prover(x){
+			document.getElementById(x+'img').style.transition = "0.4s"
+			document.getElementById(x+'img').height = 200;
+		}
+		function unprover(x){
+			document.getElementById(x+'img').style.transition = "0.4s"
+			document.getElementById(x+'img').height = 175;
+		}
+	</script>
 </head>
 <body>
 	<div class="header">
 		<div class="name">
 			<div id="name">
-				Daksh Rawat
+				<a href="#">Daksh Rawat</a>
 			</div>
 		</div>
 		<div class="options">
 			<div class="icon">
-				About
+				<a href="#about">About</a>
 			</div>
 			<div class="icon">
-				Skills
+				<a href="#skills">Skills</a>
 			</div>
 			<div class="icon">
-				Interests
+				<a href="#interests">Interests</a>
 			</div>
 		</div>
 	</div>
-	<div class="container lightblue">
+	<div class="container lightblue" id="about">
 		<div class="image">
 			<img src="img/me5.jpg" alt="Daksh Rawat" width="100%">
 		</div>
@@ -37,9 +60,118 @@
 			Undergrad @ IIIT-H pursuing B.Tech in CSE
 		</div>
 	</div>
-	<div class="container blue">
+	<div class="container blue" id="skills">
+		<div class="sandp">
+			<div class="skills">
+				<p class="skill-heading">
+					Programming Skills
+				</p>
+				<div class="sandr">
+					<div class="skill-grid">
+						<div class="skill s1" id="s1" onmouseover="hover('semipro')" onmouseout="unhover()">
+							C/C++	
+						</div>
+						<div class="skill s7" id="s7" onmouseover="hover('semipro')" onmouseout="unhover()">
+							JavaScript 					
+						</div>
+						<div class="skill s2" id="s2" onmouseover="hover('intermediate')" onmouseout="unhover()">
+							Python
+						</div>
+						<div class="skill s3" id="s3" onmouseover="hover('intermediate')" onmouseout="unhover()">
+							Bash
+						</div>
+						<div class="skill s4" id="s4" onmouseover="hover('pro')" onmouseout="unhover()">
+							HTML
+						</div>
+						<div class="skill s5" id="s5" onmouseover="hover('intermediate')" onmouseout="unhover()">
+							CSS
+						</div>
+						<div class="skill s6" id="s6" onmouseover="hover('pro')" onmouseout="unhover()">
+							SQL
+						</div>
+					</div>
+					<div class="ratings">
+						<div class="ratings-bar">
+							<div class="rating-out">
+								<div id="pro" class="rating">
+								</div>
+								<p>Pro</p>
+							</div>
+							<div class="rating-out">
+								<div id="semipro" class="rating">
+								</div>
+								<p>SemiPro</p>
+							</div>
+							<div class="rating-out">
+								<div id="intermediate" class="rating">
+								</div>
+								<p>Intermediate</p>
+							</div>	
+							<div class="rating-out">
+								<div id="beginner" class="rating">
+								</div>
+								<p>Beginner</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="projects">
+			<p class="project-heading">
+				Some of My Projects	
+			</p>
+			<div class="project-grid">
+				<div class="project" id="sele" onmouseover="prover('sele')" onmouseout="unprover('sele')">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+					    	<img class="activator" src="img/sele.png" height="175px" id="seleimg">
+					    </div>
+					    <div class="card-content">
+					    	<span class="card-title activator grey-text text-darken-4">Selenium Scripts<i class="material-icons right">more_vert</i></span>
+					    	<p><a href="https://github.com/daksh0225/Selenium-Scripts" target="_blank">View on GitHub</a></p>
+					    </div>
+					    <div class="card-reveal">
+					    	<span class="card-title grey-text text-darken-4">Selenium Scripts<i class="material-icons right">close</i></span>
+					    	<p>Some scripts written in python to automate tasks like downloading assignments, getting information, etc. using Selenium Webdriver.</p>
+					    </div>
+					</div>
+				</div>
+				<div class="project" id="blog" onmouseover="prover('blog')" onmouseout="unprover('blog')">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+					    	<img class="activator" src="img/blog.png" height="175px" id="blogimg">
+					    </div>
+					    <div class="card-content">
+					    	<span class="card-title activator grey-text text-darken-4">Blogging WebApp<i class="material-icons right">more_vert</i></span>
+					    	<p><a href="https://github.com/daksh0225/blog_Webapp" target="_blank">View on GitHub</a></p>
+					    </div>
+					    <div class="card-reveal">
+					    	<span class="card-title grey-text text-darken-4">Blogging WebApp<i class="material-icons right">close</i></span>
+					    	<p>A blogging portal hosted on the Google App Engine, allowing users to signup and write blogs or write blogs as guests. Currently under progress.</p>
+					    </div>
+					</div>		            
+				</div>
+				<div class="project" id="shell" onmouseover="prover('shell')" onmouseout="unprover('shell')">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+					    	<img class="activator" src="img/shell.png" height="175px" id="shellimg">
+					    </div>
+					    <div class="card-content">
+					    	<span class="card-title activator grey-text text-darken-4">C-Shell<i class="material-icons right">more_vert</i></span>
+					    	<p><a href="https://github.com/daksh0225/C-shell" target="_blank">View on GitHub</a></p>
+					    </div>
+					    <div class="card-reveal">
+					    	<span class="card-title grey-text text-darken-4">C-Shell<i class="material-icons right">close</i></span>
+					    	<p>A custom terminal shell coded in C based on the POSIX architecture with integrated system calls. All common shell
+							commands had native support with system calls used for less commonly used commands. An in-depth understanding of computer system architecture was gained in the process.</p>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="container darkblue">
+	<div class="container darkblue" id="interests">
 	</div>
 	<div class="footer-high">
 		<div class="footer">
@@ -48,7 +180,7 @@
 					CONTACT ME
 				</p>
 				<form class="input">
-					<input type="text" name="email" placeholder="Email Id" id="email">
+					<input type="text" name="email" placeholder="Email Id" id="email" class="email">
 					<textarea id="message" placeholder="Message"></textarea> 
 					<input type="submit" value="Submit" id="submit">
 				</form>
@@ -71,9 +203,8 @@
 					</a>
 				</div>
 			</div>
-			<!-- <div class="vl"></div> -->
 			<div class="location">
-				<i class="material-icons" style="color:red;font-size:60px;">place</i>
+				<a href="https://www.google.com/maps/place/BAKUL+NIVAS/@17.4480556,78.3461329,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb93a3694c1093:0xda3e609fd9666245!8m2!3d17.4480505!4d78.3483216" target="_blank" style="text-decoration: none;"><i class="material-icons" style="color:red;font-size:60px;">place</i></a>
 				<p class="address">258, Bakul Nivas, IIIT-H, Gachibowli, Hyderabad</p>
 			</div>
 		</div>
