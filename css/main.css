@@ -118,9 +118,6 @@ body{
 	font-family: 'Arvo', serif;
 	font-size: 35px;
 }
-.darkblue{
-	background-color: #002D57; 
-}
 .ratings{
 	display: flex;
 	flex-direction: column;
@@ -212,4 +209,62 @@ body{
 .project-heading{
 	font-family: 'Arvo',serif;
 	font-size: 35px;
+}
+.darkblue{
+	background-color: #002D57; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Arvo', serif;
+}
+.interest-heading{
+	font-size: 35px;
+	color: white;
+}
+.interests{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.interests div{
+	width: 250px;
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	transition: 0.4s;
+	justify-content: flex-end;
+	box-shadow: 0px 0px 50px black;
+}
+.interests div:hover{
+	width: 275px;
+	height: 275px;
+	transition: 0.4s;
+}
+#cyber{
+	background-image: url("../img/cyber.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+#football{
+	background-image: url("../img/football.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+#binge{
+	background-image: url("../img/binge.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+#webd{
+	background-image: url("../img/webd.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
 }
