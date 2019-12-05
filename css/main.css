@@ -101,7 +101,7 @@ body{
 	'Bash Bash Bash Bash CSS Python'
 	'HTML HTML HTML HTML SQL SQL';
 	grid-gap: 0px;
-	padding: 15px;
+	padding: 10px;
 	height: 400px;
 	width: 400px;
 }
@@ -137,6 +137,7 @@ body{
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+	/*border: solid 1px black;*/
 }
 .rating-out{
 	display: flex;
@@ -217,9 +218,10 @@ body{
 	align-items: center;
 	justify-content: space-around;
 	font-family: 'Arvo', serif;
+	padding: 20px;
 }
 .interest-heading{
-	font-size: 35px;
+	font-size: 45px;
 	color: white;
 }
 .interests{
@@ -228,8 +230,9 @@ body{
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+	/*border: solid 1px black;*/
 }
-.interests div{
+/*.interests div{
 	width: 250px;
 	height: 250px;
 	display: flex;
@@ -238,12 +241,12 @@ body{
 	transition: 0.4s;
 	justify-content: flex-end;
 	box-shadow: 0px 0px 50px black;
-}
-.interests div:hover{
+}*/
+/*.interests div:hover{
 	width: 275px;
 	height: 275px;
 	transition: 0.4s;
-}
+}*/
 #cyber{
 	background-image: url("../img/cyber.png");
 	background-repeat: no-repeat;
@@ -267,4 +270,83 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	cursor: pointer;
+}
+.sections{
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	transition: 0.4s;
+	justify-content: space-around;
+	/*border: solid 1px black;*/
+}
+.sections div{
+	width: 200px;
+	height: 200px;
+	box-shadow: 0px 0px 50px black;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	transition: 0.4s;
+}
+.sections div:hover{
+	width: 225px;
+	height: 225px;
+	transition: 0.4s;
+}
+@media only screen and (max-width: 1200px){
+	.interests{
+		flex-direction: column;
+	}
+	.sections div{
+		height: 175px;
+		transition: 0.4s;
+		width: 175px;
+	}
+	.sections div:hover{
+	width: 200px;
+	height: 200px;
+	transition: 0.4s;
+}
+	.interest-heading{
+		transition: 0.4s;
+		font-size: 40px;
+	}
+}
+@media only screen and (max-width: 900px){
+	.darkblue{
+		transition: 0.4s;
+		height: auto;
+	}
+	.sections{
+		/*flex-direction: column;*/
+		transition: 0.4s;
+		margin-top: 20px;
+	}
+	.sections div:hover{
+	width: 150px;
+	height: 150px;
+	transition: 0.4s;
+}
+	.sections div{
+		height: 130px;
+		transition: 0.4s;
+		width: 130px;
+	}
+	.interest-heading{
+		transition: 0.4s;
+		font-size: 30px;
+	}
+	#cyber span, #binge span, #webd span, #football span{
+		font-size: 15px;
+		transition: 0.4s;
+		text-overflow: break-word;
+	}
+}
+@media only screen and (max-width: 620px){
+	.sections{
+		transition: 0.4s;
+		flex-direction: column;
+	}
 }
