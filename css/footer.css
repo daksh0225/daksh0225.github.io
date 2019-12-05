@@ -18,6 +18,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+	transition: 0.3s;
 	font-family: 'Arvo', serif;
 
 }
@@ -73,7 +74,7 @@ i:hover{
 .soc{
 	font-size: 40px;
 }*/
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 920px){
 	.link{
 		font-size: 25px;
 		transition: 0.3s;
@@ -88,6 +89,16 @@ i:hover{
 	}
 	.footer-heading{
 		font-size: 25px;
+		transition: 0.3s;
+	}
+}
+@media only screen and (max-width: 450px){
+	.footer{
+		flex-direction: column;
+		transition: 0.3s;
+	}
+	.address{
+		font-size: 12px;
 		transition: 0.3s;
 	}
 }

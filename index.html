@@ -31,6 +31,14 @@
 			document.getElementById(x+'img').style.transition = "0.4s"
 			document.getElementById(x+'img').height = 175;
 		}
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "options") {
+			  x.className += " responsive";
+			} else {
+			  x.className = "options";
+			}
+		}
 	</script>
 </head>
 <body>
@@ -40,7 +48,12 @@
 				<a href="#">Daksh Rawat</a>
 			</div>
 		</div>
-		<div class="options">
+		<div class="options" id="myTopnav">
+			<div class="icont">
+				<a href="javascript:void(0);" class="iconline" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
 			<div class="icon">
 				<a href="#about">About</a>
 			</div>
@@ -48,7 +61,7 @@
 				<a href="#skills">Skills</a>
 			</div>
 			<div class="icon">
-				<a href="#interests">Interests</a>
+				<a href="#projects">Projects</a>
 			</div>
 		</div>
 	</div>
@@ -60,9 +73,9 @@
 			Undergrad @ IIIT-H pursuing B.Tech in CSE
 		</div>
 	</div>
-	<div class="container blue" id="skills">
+	<div class="container blue">
 		<div class="sandp">
-			<div class="skills">
+			<div class="skills" id="skills">
 				<p class="skill-heading">
 					Programming Skills
 				</p>
@@ -117,7 +130,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="projects">
+		<div class="projects" id="projects">
 			<p class="project-heading">
 				Some of My Projects	
 			</p>
@@ -128,7 +141,7 @@
 					    	<img class="activator" src="img/sele.png" height="175px" id="seleimg">
 					    </div>
 					    <div class="card-content">
-					    	<span class="card-title activator grey-text text-darken-4">Selenium Scripts<i class="material-icons right">more_vert</i></span>
+					    	<span class="card-title activator grey-text text-darken-4"><span class="cardh">Selenium Scripts</span><i class="material-icons right">more_vert</i></span>
 					    	<p><a href="https://github.com/daksh0225/Selenium-Scripts" target="_blank">View on GitHub</a></p>
 					    </div>
 					    <div class="card-reveal">
@@ -137,28 +150,13 @@
 					    </div>
 					</div>
 				</div>
-				<div class="project" id="blog" onmouseover="prover('blog')" onmouseout="unprover('blog')">
-					<div class="card">
-						<div class="card-image waves-effect waves-block waves-light">
-					    	<img class="activator" src="img/blog.png" height="175px" id="blogimg">
-					    </div>
-					    <div class="card-content">
-					    	<span class="card-title activator grey-text text-darken-4">Blogging WebApp<i class="material-icons right">more_vert</i></span>
-					    	<p><a href="https://github.com/daksh0225/blog_Webapp" target="_blank">View on GitHub</a></p>
-					    </div>
-					    <div class="card-reveal">
-					    	<span class="card-title grey-text text-darken-4">Blogging WebApp<i class="material-icons right">close</i></span>
-					    	<p>A blogging portal hosted on the Google App Engine, allowing users to signup and write blogs or write blogs as guests. Currently under progress.</p>
-					    </div>
-					</div>		            
-				</div>
 				<div class="project" id="shell" onmouseover="prover('shell')" onmouseout="unprover('shell')">
 					<div class="card">
 						<div class="card-image waves-effect waves-block waves-light">
 					    	<img class="activator" src="img/shell.png" height="175px" id="shellimg">
 					    </div>
 					    <div class="card-content">
-					    	<span class="card-title activator grey-text text-darken-4">C-Shell<i class="material-icons right">more_vert</i></span>
+					    	<span class="card-title activator grey-text text-darken-4"><span class="cardh">C-Shell</span><i class="material-icons right">more_vert</i></span>
 					    	<p><a href="https://github.com/daksh0225/C-shell" target="_blank">View on GitHub</a></p>
 					    </div>
 					    <div class="card-reveal">
@@ -168,10 +166,25 @@
 					    </div>
 					</div>
 				</div>
+				<div class="project" id="blog" onmouseover="prover('blog')" onmouseout="unprover('blog')">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+					    	<img class="activator" src="img/blog.png" height="175px" id="blogimg">
+					    </div>
+					    <div class="card-content">
+					    	<span class="card-title activator grey-text text-darken-4"><span class="cardh">Blogging WebApp</span><i class="material-icons right">more_vert</i></span>
+					    	<p><a href="https://github.com/daksh0225/blog_Webapp" target="_blank">View on GitHub</a></p>
+					    </div>
+					    <div class="card-reveal">
+					    	<span class="card-title grey-text text-darken-4">Blogging WebApp<i class="material-icons right">close</i></span>
+					    	<p>A blogging portal hosted on the Google App Engine, allowing users to signup and write blogs or write blogs as guests. Currently under progress.</p>
+					    </div>
+					</div>		            
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container darkblue" id="interests">
+	<!-- <div class="container darkblue" id="interests">
 		<div class="interest-heading">
 			Some of my Interests
 		</div>
@@ -218,7 +231,7 @@
 			</div>			
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="footer-high">
 		<div class="footer-heading">
 			Find Me Here
