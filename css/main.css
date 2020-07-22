@@ -29,10 +29,13 @@ body{
 	font-family: 'Arvo', serif;
 	font-size: 40px;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	text-overflow: break-word;
 	transition: 0.4s;
-	justify-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 5px;
+	text-align: center
 	/*color: white;*/
 }
 .blue{
@@ -96,13 +99,34 @@ body{
 .s6{
 	grid-area: SQL;
 	background-color: #410091;
+	font-size: 25px;
+	transition: 0.4s;
+	justify-content: flex-start;
 	border-bottom-right-radius: 50px;
+}
+.s7{
+	grid-area: JS;
+	background-color: #000080;
 	font-size: 25px;
 	transition: 0.4s;
 	justify-content: flex-start;
 }
-.s7{
-	grid-area: JS;
+.s8{
+	grid-area: ReactJS;
+	background-color: #000080;
+	font-size: 25px;
+	transition: 0.4s;
+	justify-content: flex-start;
+}
+.s9{
+	grid-area: Flutter;
+	background-color: #000080;
+	font-size: 25px;
+	transition: 0.4s;
+	justify-content: flex-start;
+}
+.s10{
+	grid-area: Django;
 	background-color: #000080;
 	font-size: 25px;
 	transition: 0.4s;
@@ -112,11 +136,11 @@ body{
 	display: grid;
 	/*border: solid 1px black;*/
 	grid-template:
-	'C C C C C C'
+	'C C C C C C ReactJS'
 	/*'c1 c1 c1 c1 c1 c1'*/
-	'JS JS JS JS JS Python'
-	'Bash Bash Bash Bash CSS Python'
-	'HTML HTML HTML HTML SQL SQL';
+	'JS JS JS JS JS Python Flutter'
+	'Bash Bash Bash Bash CSS Python Django'
+	'HTML HTML HTML HTML SQL SQL Django';
 	transition: 0.4s;
 	grid-gap: 0px;
 	padding: 10px;
@@ -158,8 +182,9 @@ body{
 	flex-direction: row;
 	align-items: center;
 	transition: 0.4s;
-	justify-content: space-around;
-	/*border: solid 1px black;*/
+	justify-content: space-evenly;
+	/* width: 60%; */
+	/* border: solid 1px black; */
 }
 .rating-out{
 	display: flex;
@@ -462,7 +487,7 @@ body{
 		transition: 0.4s;
 	}
 	.about{
-		font-size: 22px;
+		font-size: 18px;
 		transition: 0.4s;
 	}
 	.image{
@@ -473,7 +498,7 @@ body{
 }
 @media only screen and (max-width: 700px){
 	.about{
-		font-size: 25px;
+		font-size: 22px;
 		transition: 0.4s;
 	}
 }

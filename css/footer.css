@@ -59,6 +59,7 @@ i:hover{
 	flex-wrap: wrap;
 	padding: 15px;
 	width: 40%;
+	text-align: center;
 }
 .address{
 	color:#FFFFFF;
