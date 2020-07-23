@@ -415,7 +415,7 @@ body{
 		transition: 0.4s;
 		font-size: 
 	}
-	#shellimg, #flutterimg, #blogimg{
+	#shellimg, #flutterimg, #blogimg, #mernimg{
 		height: 140px;
 		transition: 0.4s;
 	}
