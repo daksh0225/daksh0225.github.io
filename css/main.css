@@ -1,270 +1,363 @@
-body{
-	margin:0px;
+@keyframes cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }
-.container{
-	height: 600px;
-	width: 100%;
-	/*max-width: 2000px;*/
+@keyframes typing {
+  from {
+    width: 100%;
+  }
+  90%, to {
+    width: 0;
+  }
+}
+@keyframes slide {
+  50% {
+    font-size: inherit;
+    letter-spacing: 3px;
+  }
+  to {
+    font-size: 0;
+    letter-spacing: 0;
+  }
+}
+.typing-slider {
+  font-family: Consolas, monospace;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.lightblue{
-	background-color: #8CCFFF;
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-	transition: 0.4s;
-	align-items: center;
-	justify-content: space-around;
+.typing-slider p {
+  position: relative;
+  display: inline;
+  font-size: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  animation: slide 6s step-start infinite;
 }
-.image{
-	height: 300px;
-	width: 300px;
-	overflow: hidden;
-	border-radius: 50%;
-	transition: 0.4s;
-	box-shadow: 0px 0px 50px #2B8FED;
-	/*border: solid 1px black;*/
+
+.typing-slider p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 3px solid black;
+  background-color: #8CCFFF;
+  animation: typing 3s infinite, cursor 1s infinite;
 }
+
+.typing-slider p:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-slider p:nth-child(1)::after {
+  animation-delay: 0s;
+  animation-timing-function: steps(18), step-end;
+}
+
+.typing-slider p:nth-child(2) {
+  animation-delay: 3s;
+}
+.typing-slider p:nth-child(2)::after {
+  animation-delay: 3s;
+  animation-timing-function: steps(14), step-end;
+}
+
+body {
+  margin: 0px;
+}
+
+.container {
+  height: 600px;
+  width: 100%;
+  /*max-width: 2000px;*/
+}
+
+.lightblue {
+  background-color: #8CCFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: 0.4s;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: 0.4s;
+  box-shadow: 0px 0px 50px #2B8FED;
+  /*border: solid 1px black;*/
+}
+
 .about {
-	font-family: 'Arvo', serif;
-	font-size: 40px;
-	display: flex;
-	flex-direction: column;
-	text-overflow: break-word;
-	transition: 0.4s;
-	justify-content: space-evenly;
-	align-items: center;
-	padding: 5px;
-	text-align: center
-	/*color: white;*/
-}
-.blue{
-	background-color: #2B8FED;
-	display: flex;
-	flex-direction: row;
-	transition: 0.4s;
-	align-items: center;
-	justify-content: space-around;
-}
-.skills{
-	display: flex;
-	flex-direction: column;
-	transition: 0.4s;
-	align-items: center;
-	/*border: solid 1px black;*/
-	padding: 10px;
-	/*background-color: white;*/
+  font-family: "Arvo", serif;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  text-overflow: break-word;
+  transition: 0.4s;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
 }
 
-.s1{
-	grid-area: C;
-	background-color: #7EF9FF;
-	font-size: 25px;
-	transition: 0.4s;
-	transition: 0.4s;
-	justify-content: space-between;
-	border-top-left-radius: 50px;
-	/*border-top-right-radius: 50px;*/
+.blue {
+  background-color: #2B8FED;
+  display: flex;
+  flex-direction: row;
+  transition: 0.4s;
+  align-items: center;
+  justify-content: space-around;
 }
-.s2{
-	grid-area: Python;
-	font-size: 20px;
-	flex-direction: column;
-	justify-content: flex-start;
-	transition: 0.4s;
-	background-color: #008081;
-}
-.s3{
-	grid-area: Bash;
-	background-color: #0F52BA;
-	transition: 0.4s;
-	font-size: 25px;
-	justify-content: flex-start;
-}
-.s4{
-	grid-area: HTML;
-	background-color: #003152;
-	/*border-bottom-left-radius: 50px;*/
-	font-size: 25px;
-	transition: 0.4s;
-	justify-content: flex-start;
-}
-.s5{
-	grid-area: CSS;
-	background-color: #4114C9;
-	font-size: 25px;
-	transition: 0.4s;
-	justify-content: flex-start;
-}
-.s6{
-	grid-area: SQL;
-	background-color: #410091;
-	font-size: 25px;
-	transition: 0.4s;
-	justify-content: flex-start;
-	border-bottom-right-radius: 50px;
-}
-.s7{
-	grid-area: JS;
-	background-color: #000080;
-	font-size: 25px;
-	transition: 0.4s;
-	justify-content: flex-start;
-}
-.s8{
-	grid-area: ReactJS;
-	background-color: #000080;
-	font-size: 25px;
-	transition: 0.4s;
-	justify-content: flex-start;
-}
-.s9{
-	grid-area: Flutter;
-	background-color: #000080;
-	font-size: 25px;
-	transition: 0.4s;
-	justify-content: flex-start;
-}
-.s10{
-	grid-area: Django;
-	background-color: #000080;
-	font-size: 25px;
-	transition: 0.4s;
-	justify-content: flex-start;
-}
-.skill-grid{
-	display: grid;
-	/*border: solid 1px black;*/
-	grid-template:
-	'C C C C C C ReactJS'
-	/*'c1 c1 c1 c1 c1 c1'*/
-	'JS JS JS JS JS Python Flutter'
-	'Bash Bash Bash Bash CSS Python Django'
-	'HTML HTML HTML HTML SQL SQL Django';
-	transition: 0.4s;
-	grid-gap: 0px;
-	padding: 10px;
-	height: 400px;
-	width: 400px;
-}
-.skill{
-	/*border: solid 1px black;*/
-	padding: 25px;
-	display: flex;
-	align-items: center;
-	transition: 0.4s;
-	/*justify-content: flex-start;*/
-	font-family: 'Arvo', serif;
-}
-.skill-heading{
-	font-family: 'Arvo', serif;
-	transition: 0.4s;
-	font-size: 35px;
-}
-.ratings{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	transition: 0.4s;
-}
-.ratings-bar{
-	display: flex;
-	flex-direction: column;
-	padding: 15px;
-	align-items: center;
-	justify-content: space-around;
-	transition: 0.4s;
-	/*border: solid 1px black;*/
-	/*height: 450px;*/
-}
-.sandr{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	transition: 0.4s;
-	justify-content: space-evenly;
-	/* width: 60%; */
-	/* border: solid 1px black; */
-}
-.rating-out{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	/*justify-content: flex-start;*/
-	/*border: solid 1px black;*/
-	font-family: 'Arvo',serif;
-	padding: 15px;
-	transition: 0.4s;
-	width: 200px;
-}
-.rating{
-	height: 30px;
-	width: 30px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	transition: 0.4s;
-	/*border: solid 1px black;*/
-	justify-content: center;
-}
-#pro{
-	background-color: #D6D6D6;
-}
-#semipro{
-	background-color: #8C918D;
-}
-#intermediate{
-	background-color: #524C4B;
-}
-#beginner{
-	background-color: #000000;
-	color: white;
-}
-.skill:hover{
-	transition: 0.4s;
-	background-color: gold;
-}
-.sandp{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	transition: 0.4s;
-	/*border: solid 1px black;*/
-}
-.projects{
-	/*border: solid 1px black;*/
-	transition: 0.4s;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-}
-.project-grid{
-	display: flex;
-	flex-direction: row;
-	padding: 15px;
-	flex-wrap: wrap;
-	transition: 0.4s;
-	align-items: center;
-	justify-content: space-around;
 
+.skills {
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s;
+  align-items: center;
+  /*border: solid 1px black;*/
+  padding: 10px;
+  /*background-color: white;*/
 }
-.project{
-	padding: 15px;
-	width: 300px;
-	font-family: 'Arvo', serif;
-	transition: 0.4s;
+
+.s1 {
+  grid-area: C;
+  background-color: #7EF9FF;
+  font-size: 25px;
+  transition: 0.4s;
+  transition: 0.4s;
+  justify-content: space-between;
+  border-top-left-radius: 50px;
+  /*border-top-right-radius: 50px;*/
 }
+
+.s2 {
+  grid-area: Python;
+  font-size: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: 0.4s;
+  background-color: #008081;
+}
+
+.s3 {
+  grid-area: Bash;
+  background-color: #0F52BA;
+  transition: 0.4s;
+  font-size: 25px;
+  justify-content: flex-start;
+}
+
+.s4 {
+  grid-area: HTML;
+  background-color: #003152;
+  /*border-bottom-left-radius: 50px;*/
+  font-size: 25px;
+  transition: 0.4s;
+  justify-content: flex-start;
+}
+
+.s5 {
+  grid-area: CSS;
+  background-color: #4114C9;
+  font-size: 25px;
+  transition: 0.4s;
+  justify-content: flex-start;
+}
+
+.s6 {
+  grid-area: SQL;
+  background-color: #410091;
+  font-size: 25px;
+  transition: 0.4s;
+  justify-content: flex-start;
+  border-bottom-right-radius: 50px;
+}
+
+.s7 {
+  grid-area: JS;
+  background-color: #000080;
+  font-size: 25px;
+  transition: 0.4s;
+  justify-content: flex-start;
+}
+
+.s8 {
+  grid-area: ReactJS;
+  background-color: #000080;
+  font-size: 25px;
+  transition: 0.4s;
+  justify-content: flex-start;
+}
+
+.s9 {
+  grid-area: Flutter;
+  background-color: #000080;
+  font-size: 25px;
+  transition: 0.4s;
+  justify-content: flex-start;
+}
+
+.s10 {
+  grid-area: Django;
+  background-color: #000080;
+  font-size: 25px;
+  transition: 0.4s;
+  justify-content: flex-start;
+}
+
+.skill-grid {
+  display: grid;
+  /*border: solid 1px black;*/
+  grid-template: "C C C C C C ReactJS" "JS JS JS JS JS Python Flutter" "Bash Bash Bash Bash CSS Python Django" "HTML HTML HTML HTML SQL SQL Django";
+  transition: 0.4s;
+  grid-gap: 0px;
+  padding: 10px;
+  height: 400px;
+  width: 400px;
+}
+
+.skill {
+  /*border: solid 1px black;*/
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+  /*justify-content: flex-start;*/
+  font-family: "Arvo", serif;
+}
+
+.skill-heading {
+  font-family: "Arvo", serif;
+  transition: 0.4s;
+  font-size: 35px;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.ratings-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.4s;
+  /*border: solid 1px black;*/
+  /*height: 450px;*/
+}
+
+.sandr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.4s;
+  justify-content: space-evenly;
+  /* width: 60%; */
+  /* border: solid 1px black; */
+}
+
+.rating-out {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*justify-content: flex-start;*/
+  /*border: solid 1px black;*/
+  font-family: "Arvo", serif;
+  padding: 15px;
+  transition: 0.4s;
+  width: 200px;
+}
+
+.rating {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+  /*border: solid 1px black;*/
+  justify-content: center;
+}
+
+#pro {
+  background-color: #D6D6D6;
+}
+
+#semipro {
+  background-color: #8C918D;
+}
+
+#intermediate {
+  background-color: #524C4B;
+}
+
+#beginner {
+  background-color: #000000;
+  color: white;
+}
+
+.skill:hover {
+  transition: 0.4s;
+  background-color: gold;
+}
+
+.sandp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.4s;
+}
+
+.projects {
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  flex-wrap: wrap;
+  transition: 0.4s;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project {
+  padding: 15px;
+  width: 300px;
+  font-family: "Arvo", serif;
+  transition: 0.4s;
+}
+
 /*.project:hover{
 	transition: 0.4s;
 	width: 325px;
 }*/
-.project-heading{
-	font-family: 'Arvo',serif;
-	transition: 0.4s;
-	font-size: 35px;
+.project-heading {
+  font-family: "Arvo", serif;
+  transition: 0.4s;
+  font-size: 35px;
 }
+
 /*.darkblue{
 	background-color: #002D57; 
 	display: flex;
@@ -402,103 +495,121 @@ body{
 		flex-direction: column;
 	}
 }*/
-@media only screen and (max-width: 1600px){
-	.blue{
-		flex-direction: column;
-		transition: 0.4s;
-		height: auto;
-	}
+@media only screen and (max-width: 1600px) {
+  .blue {
+    flex-direction: column;
+    transition: 0.4s;
+    height: auto;
+  }
 }
-@media only screen and (max-width: 950px){
-	.project{
-		width: 260px;
-		transition: 0.4s;
-		font-size: 
-	}
-	#shellimg, #flutterimg, #blogimg, #mernimg{
-		height: 140px;
-		transition: 0.4s;
-	}
-	.cardh{
-		transition: 0.4s;
-		font-size: 20px;
-	}
-	.skill-heading,.project-heading{
-		font-size: 30px;
-		transition: 0.4s;
-	}
-	.skill-grid{
-		height: 275px;
-		width: 275px;
-		transition: 0.4s;
-	}
-	.s1,.s3,.s4,.s5,.s6,.s7{
-		transition: 0.4s;
-		font-size: 16px;
-	}
-	.s2{
-		transition: 0.4s;
-		font-size: 15px;
-	}
-	.skill{
-		transition: 0.4s;
-		padding: 18px;
-	}
-	.rating{
-		height: 20px;
-		width: 20px;
-		transition: 0.4s;
-	}
-	.rating-out{
-		padding: 5px;
-		transition: 0.4s;
-		width: 150px;
-	}
-	.rating-out p{
-		transition: 0.4s;
-		font-size: 12px;
-	}
-	.about{
-		font-size: 30px;
-		transition: 0.4s;
-	}
-	.image{
-		height: 250px;
-		transition: 0.4s;
-		width: 250px;
-	}
-	.lightblue{
-		transition: 0.4s;
-		height: 500px;
-	}
+@media only screen and (max-width: 950px) {
+  .project {
+    width: 260px;
+    transition: 0.4s;
+  }
+
+  #shellimg, #flutterimg, #blogimg, #mernimg {
+    height: 140px;
+    transition: 0.4s;
+  }
+
+  .cardh {
+    transition: 0.4s;
+    font-size: 20px;
+  }
+
+  .skill-heading, .project-heading {
+    font-size: 30px;
+    transition: 0.4s;
+  }
+
+  .skill-grid {
+    height: 275px;
+    width: 275px;
+    transition: 0.4s;
+  }
+
+  .s1, .s3, .s4, .s5, .s6, .s7 {
+    transition: 0.4s;
+    font-size: 16px;
+  }
+
+  .s2 {
+    transition: 0.4s;
+    font-size: 15px;
+  }
+
+  .skill {
+    transition: 0.4s;
+    padding: 18px;
+  }
+
+  .rating {
+    height: 20px;
+    width: 20px;
+    transition: 0.4s;
+  }
+
+  .rating-out {
+    padding: 5px;
+    transition: 0.4s;
+    width: 150px;
+  }
+
+  .rating-out p {
+    transition: 0.4s;
+    font-size: 12px;
+  }
+
+  .about {
+    font-size: 30px;
+    transition: 0.4s;
+  }
+
+  .image {
+    height: 250px;
+    transition: 0.4s;
+    width: 250px;
+  }
+
+  .lightblue {
+    transition: 0.4s;
+    height: 500px;
+  }
 }
-@media only screen and (max-width: 550px){
-	.sandr{
-		transition: 0.4s;
-		flex-direction: column;
-	}
-	.ratings-bar{
-		transition: 0.4s;
-		flex-direction: row;
-	}
-	.rating-out{
-		flex-direction: column;
-		width: 80px;
-		transition: 0.4s;
-	}
-	.about{
-		font-size: 18px;
-		transition: 0.4s;
-	}
-	.image{
-		height: 200px;
-		width: 200px;
-		transition: 0.4s;
-	}
+@media only screen and (max-width: 550px) {
+  .sandr {
+    transition: 0.4s;
+    flex-direction: column;
+  }
+
+  .ratings-bar {
+    transition: 0.4s;
+    flex-direction: row;
+  }
+
+  .rating-out {
+    flex-direction: column;
+    width: 80px;
+    transition: 0.4s;
+  }
+
+  .about {
+    font-size: 18px;
+    transition: 0.4s;
+  }
+
+  .image {
+    height: 200px;
+    width: 200px;
+    transition: 0.4s;
+  }
 }
-@media only screen and (max-width: 700px){
-	.about{
-		font-size: 22px;
-		transition: 0.4s;
-	}
+@media only screen and (max-width: 700px) {
+  .about {
+    font-size: 22px;
+    transition: 0.4s;
+  }
 }
+
+/*# sourceMappingURL=main.css.map */
